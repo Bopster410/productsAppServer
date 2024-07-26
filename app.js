@@ -2,12 +2,15 @@ const { API_ROUTE, ROUTERS_URLS } = require('./constants');
 const productsRouter = require('./routes/products/route');
 const express = require('express');
 const cors = require('cors');
+const bcrypt = require('bcryptjs');
 
 const app = express();
 
+app.use(express.json());
+
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: 'https://prismatic-cat-80aedd.netlify.app',
         credentials: true,
         optionsSuccessStatus: 200,
     })
