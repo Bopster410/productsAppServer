@@ -1,0 +1,34 @@
+GET http://localhost:3030/api/users
+
+###
+
+POST http://localhost:3030/api/users/add
+Content-Type: application/json
+
+{
+    "email": "bop@mail.ru",
+    "password": "1212"
+}
+
+###
+
+POST http://localhost:3030/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "bopster@mail.ru",
+    "password": "12345"
+}
+###
+
+POST http://localhost:3030/api/auth/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjAsInBhc3N3b3JkIjoiJDJhJDEwJExhUjBvQ2puWGc5Q3ZqUkhZUVFRRmV1RThTNEE1ZGh2R2VVRUdVOHY3Nm5YR1dYV0VaanVlIiwiaWF0IjoxNzIyMjU2MTk2fQ.NofUiJkEY7Wjo8NBzIXKwBVEeNegicHcdQLJJh0_jTs"
+}
+
+###
+
+GET http://localhost:3030/api/users/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjAsImlhdCI6MTcyMjI1NjI1MiwiZXhwIjoxNzIyMjU2MjgyfQ.AS8sOAHXK2wDH_PXWMVKQKwLxURGpcDjIkpmab_-d8o
