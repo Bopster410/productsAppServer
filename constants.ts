@@ -2,6 +2,8 @@ const API_ROUTE = '/api';
 
 const ROUTERS_URLS = {
     PRODUCTS: '/products',
+    USERS: '/users',
+    AUTH: '/auth',
 };
 
-module.exports = { ROUTERS_URLS, API_ROUTE };
+export { ROUTERS_URLS, API_ROUTE };
