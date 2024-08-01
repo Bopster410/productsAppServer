@@ -6,7 +6,7 @@ import cors from 'cors';
 import { authRouter } from './routes/auth';
 require('dotenv').config();
 
-const MODE = process.env.NODE_ENV;
+const MODE = process.env.DEPLOY_MODE;
 
 const app = express();
 
