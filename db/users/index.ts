@@ -37,8 +37,10 @@ export function getUserByEmail(userEmail: string) {
 export function addProductToCart(userId: number, productId: string) {
     const cart = usersCarts.filter((cart) => userId === cart.userId)[0];
 
-    if (cart === undefined)
+    if (cart === undefined) {
         usersCarts.push({ userId, products: [{ productId, total: 1 }] });
+        return 1;
+    }
     if (cart !== undefined) {
         const product = cart.products.filter(
             (product) => productId === product.productId
