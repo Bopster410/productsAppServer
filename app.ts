@@ -16,7 +16,10 @@ app.use(
     cors({
         origin:
             MODE === 'production'
-                ? 'https://prismatic-cat-80aedd.netlify.app'
+                ? [
+                      'https://prismatic-cat-80aedd.netlify.app',
+                      'https://develop--prismatic-cat-80aedd.netlify.app',
+                  ]
                 : 'http://localhost:5173',
         credentials: true,
         optionsSuccessStatus: 200,
